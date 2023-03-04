@@ -1,20 +1,21 @@
 ======== HDFS commands ========== 
 
-wget https://raw.githubusercontent.com/futurexskill/bigdata/master/bank_prospects.csv
+wget https://raw.githubusercontent.com/lipengyuan1994/DataEngineering_tutoring_project_home/main/data_cleaning_project_demo/bank_prospects.csv
 
 
 hadoop fs -ls
 
-hadoop fs -mkdir /user/futurexskills2023
+hadoop fs -mkdir /user/lpy
 
-hadoop fs -mkdir /user/futurexskills2023/bankraw
+hadoop fs -mkdir /user/lpy/bankraw
 
+hadoop fs -put bank_prospects.csv /user/lpy/bankraw
 
 ==============PySpark Shell ===========
 
 pyspark
 
-bankProspectsDF = spark.read.csv("/user/futurexskills2023/bankraw/bank_prospects.csv",header=True)
+bankProspectsDF = spark.read.csv("/user/lpy/bankraw/bank_prospects.csv",header=True)
 
 
 bankProspectsDF.show()
@@ -80,7 +81,7 @@ bankbankProspectsDF4.printSchema()
 
 """## Write the transformed file to a new csv file """
 
-bankbankProspectsDF4.write.format("csv").save("bank_prospects_transformed")
+bankbankProspectsDF4.write.format("csv").save("/user/lpy/bankraw/bank_prospects_transformed_2")
 
 
 ========  verify if the file is present in HDFS ===========
@@ -92,14 +93,23 @@ hadoop fs -cat bank_prospects_transformed/part-00000-bf47ed47-291c-40df-91b5-8fc
 
 hive
 
-create database if not exists futurex;
+create database if not exists pj2;
 
+Use pj2;
 
-create table bankprospectcleaned (age INT, salary FLOAT,gender String,country String, purchased String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION '/user/futurexskills2023/bank_prospects_transformed/' TBLPROPERTIES ("skip.header.line.count"="1") ;
+Drop table bankprospectcleaned ;
+
+create table bankprospectcleaned (age INT, salary FLOAT, gender String, country String, purchased String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION '/user/lpy/bankraw/bank_prospects_transformed' ;
 
 show tables;
 
 select * from bankprospectcleaned;
+
+
+
+
+nano bank_prospects_transformed_2.py
+
 
 ======= spark-submit ===================
 
@@ -108,7 +118,7 @@ select * from bankprospectcleaned;
 < Spark session code
 
 from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName("futurexskills-project").getOrCreate()
+spark = SparkSession.builder.appName("pj2-project").getOrCreate()
 
 >
 
@@ -126,7 +136,7 @@ spark-submit bankprospects_trasformation.py
 
 
 
-hadoop fs -ls bank_prospects_transformed_2
+hadoop fs -ls /user/lpy/bankraw/bank_prospects_transformed_2
 
 hadoop fs -cat bank_prospects_transformed_2/part-00000-d135b2e6-90e9-4d0a-a7e6-5130ee6bc001-c000.csv
 

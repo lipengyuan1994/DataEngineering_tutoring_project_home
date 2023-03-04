@@ -1,0 +1,29 @@
+kaggle datasets download -d yelp-dataset/yelp-dataset
+
+
+
+++++++++++++++++++++++++++++ how to install kaggle API+++++++++++++++++++++++++++++++++++
+
+https://github.com/Kaggle/kaggle-api
+
+++++++++++++++++++++++++++++unzip file+++++++++++++++++++++++++++++++++++
+
+unzip yelp-dataset.zip 
+
+
+
+++++++++++++++++++++++++++++upload to hdfs+++++++++++++++++++++++++++++++++++
+
+hdfs dfs -put 
+
+
+
+
+---------------below are for my own records
+
+cat  ~/.bashrc
+
+nano ~/.bashrc
+export PATH="/home/lpy/.local/bin:$PATH"
+
+source ~/.bashrc
