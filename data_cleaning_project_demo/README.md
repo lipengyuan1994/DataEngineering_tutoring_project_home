@@ -8,3 +8,17 @@ This repo contains a data engineering demo:
 
 ## Using Hadoop/Hive for Storage, Spark for processing
 
+### PySpark - Transformation
+1. replace missing values with average values
+2. delete records with unknown values
+### Storing transformed data in a Hive table
+
+
+
+----
+
+![2023-03-04_18-33-25.jpg](images%2F2023-03-04_18-33-25.jpg)
+
+
+
+
