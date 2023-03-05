@@ -1,6 +1,6 @@
 hadoop fs -ls
 
-wget https://raw.githubusercontent.com/lipengyuan1994/DataEngineering_tutoring_project_home/main/Hello_World/retailstore.csv
+wget https://raw.githubusercontent.com/lipengyuan1994/DataEngineering_tutoring_project_home/main/Spark_Hello_World/retailstore.csv
 
 ls
 

@@ -87,7 +87,7 @@ bankbankProspectsDF4.write.format("csv").save("/user/lpy/bankraw/bank_prospects_
 ========  verify if the file is present in HDFS ===========
 hadoop fs -ls bank_prospects_transformed
 
-hadoop fs -cat bank_prospects_transformed/part-00000-bf47ed47-291c-40df-91b5-8fc1fabfb254-c000.csv
+hadoop fs -cat /user/lpy/bankraw/bank_prospects_transformed/part-00000-65a2ffe7-9312-4151-aeeb-86a336f893a8-c000.csv
 
 ======== Hive ==========
 
