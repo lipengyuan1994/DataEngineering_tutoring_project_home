@@ -1,9 +1,9 @@
 
-## YELP data set Data Engineering and Machine Learning Practice
+# YELP data set Data Engineering and Machine Learning Practice (GCP)
 
+#### keyworks: Hadoop, HIVE, Spark, GCP, BigQuery, CloudStorage, DataProc, Python, SQL, Pandas
 
-
-In This project:
+### Key Practices In This project:
 1. Data Extraction: Using **Kaggle API** to download the Yelp Dataset to DataProc Master node. (>8GB after unzip)
 2. Data Transformation: Upload the unzipped data to **Hadoop File System**; Used **pyspark** to clean the transform the dataset, then load into **HIVE** tables in Hadoop. 
 3. Performed Exploratory Data Analysis with Pyspark and Pandas, found the best 10 popular restaurants in Philadelphia.
@@ -13,12 +13,6 @@ In This project:
 
 
 
-
-------
-Resources:
-
-How to connect DataProc to BigQuery
-https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example#pyspark
 
 
 
@@ -38,3 +32,12 @@ https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-exampl
 ![2023-03-12_19-17-27.png](images%2F2023-03-12_19-17-27.png)
 
 ### ML 
+
+
+
+------
+Resources:
+
+How to connect DataProc to BigQuery
+https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example#pyspark
+
