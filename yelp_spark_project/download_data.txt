@@ -14,6 +14,8 @@ unzip yelp-dataset.zip
 
 ++++++++++++++++++++++++++++upload to hdfs+++++++++++++++++++++++++++++++++++
 
+hadoop fs -mkdir /user/pytrick/
+
 hdfs dfs -mkdir /user/pytrick/yelp_data/
 
 hdfs dfs -put yelp_academic_dataset* /user/pytrick/yelp_data/
