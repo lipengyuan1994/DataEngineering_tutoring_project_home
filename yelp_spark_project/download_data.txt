@@ -14,9 +14,11 @@ unzip yelp-dataset.zip
 
 ++++++++++++++++++++++++++++upload to hdfs+++++++++++++++++++++++++++++++++++
 
-hdfs dfs -mkdir /user/lpy/yelp_data/
+hadoop fs -mkdir /user/pytrick/
 
-hdfs dfs -put yelp_academic_dataset* /user/lpy/yelp_data/
+hdfs dfs -mkdir /user/pytrick/yelp_data/
+
+hdfs dfs -put yelp_academic_dataset* /user/pytrick/yelp_data/
 
 
 
@@ -32,6 +34,6 @@ Useful links https://www.guru99.com/data-extraction-hive.html#:~:text=Using%20Hi
 cat  ~/.bashrc
 
 nano ~/.bashrc
-export PATH="/home/lpy/.local/bin:$PATH"
+export PATH="/home/pytrick/.local/bin:$PATH"
 
 source ~/.bashrc
