@@ -8,7 +8,7 @@ In This project:
 2. Data Transformation: Upload the unzipped data to **Hadoop File System**; Used **pyspark** to clean the transform the dataset, then load into **HIVE** tables in Hadoop. 
 3. Performed Exploratory Data Analysis with Pyspark and Pandas, found the best 10 popular restaurants in Philadelphia.
 4. Created DataLayer, by de-normalizing the 5 tables; saved the data as Avro format in **CloudStorage** and loaded into **BigQuery**.
-5. .TODO ..perform ML using BigQUery ML. 
+5. .TODO ..perform ML using BigQuery ML. 
 
 
 
