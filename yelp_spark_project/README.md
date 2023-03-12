@@ -19,3 +19,22 @@ Resources:
 
 How to connect DataProc to BigQuery
 https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example#pyspark
+
+
+
+----
+## Screenshots:
+
+### Hive tables:
+
+![img.png](images%2Fimg.png)
+
+### Parquets in CloudStorage
+![2023-03-12_19-18-25.png](images%2F2023-03-12_19-18-25.png)
+### Loading to BigQuery
+
+![2023-03-12_19-10-48.png](images%2F2023-03-12_19-10-48.png)
+
+![2023-03-12_19-17-27.png](images%2F2023-03-12_19-17-27.png)
+
+### ML 
